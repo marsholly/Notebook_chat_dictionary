@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import NoteAdd from './NoteAdd'
+import Note from './Note'
 
 export default class NoteBoard extends Component {
   render(){
     return(
       <div>
-        <h1>Noteboard</h1>
+        <NoteAdd />
+        <Note />
       </div>
     )
   }
+}

@@ -8,3 +8,4 @@ export default class Dictionary extends Component {
       </div>
     )
   }
+}
