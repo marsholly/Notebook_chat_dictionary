@@ -31,13 +31,11 @@ export default class NoteAdd extends Component {
       <div>
         <h1>NoteAdd</h1>
         <form onSubmit={this.submitMessage}>
-          <div class="input-group">
-           <input className="form-control" type="text" value={this.state.user_name} placeholder="Enter Username" onChange={this.changeUsername} />
-           <button className="btn btn-info input-group-addon" type="submit"><span className="glyphicon glyphicon-send"></span></button>
+          <div className="input-group form-inline">
+            <input type="text" className="form-control" placeholder="Enter Username" value={this.state.user_name} onChange={this.changeUsername}/>
+            <a className="input-group-addon" >
+            <button className="btn btn-info btn-xs" type="submit"><i className="glyphicon glyphicon-send"></i></button></a>
           </div>
-
-          {/* <input className="form-control" type="text" value={this.state.user_name} placeholder="Enter Username" onChange={this.changeUsername} />
-          <button className="btn btn-info" type="submit"><span className="glyphicon glyphicon-send"></span></button> */}
           <textarea className="form-control" rows="2" value={this.state.message} onChange={this.changeMessage}></textarea>
         </form>
       </div>
