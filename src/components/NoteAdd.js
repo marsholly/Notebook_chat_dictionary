@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-// import { FieldGroup, FormGroup, Button, ControlLabel, FormControl } from 'react-bootstrap'
+import NoteAction from '../actions/NoteAction.js'
 
 export default class NoteAdd extends Component {
   constructor(){
     super();
     this.state = {
       user_name: '',
-      message: 'Enter Message'
+      message: ''
     }
 
     this.changeUsername = this.changeUsername.bind(this)
@@ -23,7 +23,8 @@ export default class NoteAdd extends Component {
   }
   submitMessage(e){
     e.preventDefault();
-    console.log(this.state)
+    let newNote = this.state
+    NoteAction.createNote(newNote)
   }
 
   render(){
@@ -36,7 +37,7 @@ export default class NoteAdd extends Component {
             <a className="input-group-addon" >
             <button className="btn btn-info btn-xs" type="submit"><i className="glyphicon glyphicon-send"></i></button></a>
           </div>
-          <textarea className="form-control" rows="2" value={this.state.message} onChange={this.changeMessage}></textarea>
+          <textarea className="form-control" placeholder="Enter Message" rows="2" value={this.state.message} onChange={this.changeMessage}></textarea>
         </form>
       </div>
     )
