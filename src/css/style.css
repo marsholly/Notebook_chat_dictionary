@@ -19,6 +19,10 @@
 tr div{
   padding-left: 10px;
 }
+.defWord{
+  padding: 10px;
+  font-size: 18px;
+}
 
 table{
   margin-top: 10px;

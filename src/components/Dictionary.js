@@ -7,6 +7,7 @@ export default class Dictionary extends Component {
     super();
     this.state = {
       searchWord: '',
+      currentWord: '',
       def: []
     }
     this.changeWord = this.changeWord.bind(this)
@@ -28,37 +29,38 @@ export default class Dictionary extends Component {
   sendWord(e){
     e.preventDefault();
     let searchWord = this.state
+    this.setState({currentWord: searchWord.searchWord})
     DictionaryAction.getDefinition(searchWord);
     this.setState({searchWord: ''})
   }
   render(){
     let defArr = this.state.def
     let defObj = defArr[0];
-    console.log('defObj:', defObj)
+    let word = this.state.currentWord.toUpperCase()
     let definitions
-    if(this.state.def){
-      definitions = function(){
-        console.log(defObj.defenition)
-        return(
-          <div>{defObj.defenition}</div>
-        )
+    if(this.state.def.length){
+      definitions = (
+        <div className="defWord">
+          <h3>{word} || Definition:</h3>
+          <span>{defObj.defenition}</span>
+        </div>)
+      } else {
+      definitions = (<div></div>)
       }
-    } else {
-      definitions = function(){
-        return (<div></div>)
-      }
-    }
     return(
       <div>
         <h1>Dictionary</h1>
-        <form className="navbar-form navbar-left" onSubmit={this.sendWord}>
-          <div className="form-group" >
-            <input className="form-control" value={this.state.searchWord} onChange={this.changeWord} placeholder="Search" />
-          </div>
-          <button type="submit" className="btn btn-default">Submit</button>
-        </form>
-        <div>
-        {definitions}
+        <div className="row">
+          <form className="navbar-form navbar-left" onSubmit={this.sendWord}>
+            <div className="form-group" >
+              <input className="form-control" value={this.state.searchWord} onChange={this.changeWord} placeholder="Search" />
+            </div>
+            <button type="submit" className="btn btn-default">Submit</button>
+          </form>
+
+        </div>
+        <div className='row'>
+          {definitions}
         </div>
       </div>
     )
