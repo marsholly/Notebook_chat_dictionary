@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Noteboard from './NoteBoard'
+// import Noteboard from './NoteBoard'
+import ChatBoard from './ChatBoard'
 import Dictionary from './Dictionary'
 
 export default class App extends Component {
@@ -8,7 +9,7 @@ export default class App extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-7">
-            <Noteboard />
+            <ChatBoard />
           </div>
           <div className="col-md-5">
             <Dictionary />
