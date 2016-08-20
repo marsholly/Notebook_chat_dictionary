@@ -25,6 +25,14 @@ const API = {
       .then(res => res.data)
       .then(ServerAction.recieveNotes)
       .catch(console.error)
+  },
+  getDefinition(word){
+    let { searchWord } = word
+    axios.get(`/api/dictionary/${searchWord}`)
+      .then(res =>{
+        ServerAction.recieveWord(res.data)
+      })
+      .catch(console.error)
   }
 }
 

@@ -4,17 +4,6 @@ const Note = require('../models/note')
 
 //base url: /api/notes
 
-router.put('/:id/toggle', (req, res) =>{
-  Note.toggle(req.params.id, (err, savedNote) =>{
-    if(err){
-      return res.status(400).send(err);
-    }
-    Note.find({}, (err, notes) => {
-      res.status(err ? 400: 200).send(err || notes);
-    })
-  });
-})
-
 router.route('/')
   .get((req, res) =>{
     Note.find({}, (err, notes) =>{

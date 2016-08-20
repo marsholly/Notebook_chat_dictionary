@@ -7,6 +7,12 @@ const ServerAction = {
       type: Constant.RECIEVE_NOTES,
       notes
     })
+  },
+  recieveWord(wordArr){
+    AppDispatcher.dispatch({
+      type: Constant.RECIEVE_DEF,
+      wordArr
+    })
   }
 }
 
