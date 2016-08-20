@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events'
 import AppDispatcher from '../AppDispatcher'
-import Constants from '../Constants'
+import Constant from '../Constant'
 
 let _notes = [];
 
@@ -10,14 +10,14 @@ class NoteStore extends EventEmitter{
 
     AppDispatcher.register(action =>{
       switch(action.type){
-        case Constants.RECIEVE_NOTES:
+        case Constant.RECIEVE_NOTES:
           _notes = action.notes;
           this.emit('CHANGE');
           break;
-        case Constants.CREATE_NOTE:
-          _notes.push(action.note);
-          this.emit('CHANGE');
-          break;
+        // case Constant.CREATE_NOTE:
+        //   _notes.push(action.note);
+        //   this.emit('CHANGE');
+        //   break;
       }
     });
   }

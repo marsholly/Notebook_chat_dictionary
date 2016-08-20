@@ -1,0 +1,27 @@
+.username{
+  font-size: 15px;
+  font-weight: bolder;
+  color: #BA697B;
+}
+.msgText{
+  font-size: 12px;
+}
+.buttons{
+  float:right;
+  margin-right: 5px;
+}
+.table tr:nth-child(odd){
+  background-color: #cce2ee;
+}
+.table tr:nth-child(even){
+  background-color: #f8f3ea;
+}
+tr div{
+  padding-left: 10px;
+}
+
+table{
+  margin-top: 10px;
+  border-radius: 10px !important;
+  overflow:hidden;
+}

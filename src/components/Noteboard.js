@@ -29,7 +29,7 @@ export default class NoteBoard extends Component {
     return(
       <div>
         <NoteAdd />
-        <table className="table table-striped">
+        <table className="table">
           <tbody>
             {notes}
           </tbody>

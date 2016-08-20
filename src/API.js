@@ -11,7 +11,7 @@ const API = {
   createNote(note){
     axios.post('/api/notes', note)
       .then(res => res.data)
-      .then(ServerAction.recieveOneNote)
+      .then(ServerAction.recieveNotes)
       .catch(console.error)
   },
   updateNote(id, note){

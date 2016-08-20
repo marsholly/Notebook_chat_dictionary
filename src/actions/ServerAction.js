@@ -1,17 +1,11 @@
 import AppDispatcher from '../AppDispatcher'
-import Constants from '../Constants'
+import Constant from '../Constant'
 
 const ServerAction = {
   recieveNotes(notes){
     AppDispatcher.dispatch({
-      type: Constants.RECIEVE_NOTES,
+      type: Constant.RECIEVE_NOTES,
       notes
-    })
-  },
-  recieveOneNote(note){
-    AppDispatcher.dispatch({
-      type: Constants.CREATE_NOTE,
-      note
     })
   }
 }

@@ -25,6 +25,7 @@ export default class NoteAdd extends Component {
     e.preventDefault();
     let newNote = this.state
     NoteAction.createNote(newNote)
+    this.setState({message: ''})
   }
 
   render(){
