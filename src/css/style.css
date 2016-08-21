@@ -48,3 +48,10 @@ table{
   width: 100%;
   background-color: purple;
 }
+
+.msgDiv{
+  margin-top:10px;
+  height: 300px;
+  overflow: auto;
+}
+
