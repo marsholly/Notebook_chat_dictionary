@@ -29,7 +29,9 @@ li {
 table{
   margin-top: 10px;
   border-radius: 10px !important;
-  overflow:hidden;
+  /*overflow:hidden;*/
+  height: 10px;
+  overflow: auto;
 }
 
 .leftcolor{
@@ -51,7 +53,11 @@ table{
 
 .msgDiv{
   margin-top:10px;
-  height: 300px;
+  height: 520px;
   overflow: auto;
 }
 
+.tableScroll{
+  height: 600px;
+  overflow: auto;
+}
