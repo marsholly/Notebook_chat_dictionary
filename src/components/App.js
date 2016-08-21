@@ -53,7 +53,7 @@ export default class App extends Component {
           </div>
           <div className="col-md-5">
             <Dictionary />
-            <ChatBoard />
+            <ChatBoard userName={this.state.username}/>
           </div>
         </div>
       </div>
