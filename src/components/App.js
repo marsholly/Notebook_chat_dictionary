@@ -9,10 +9,11 @@ export default class App extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-7">
-            <ChatBoard />
+            {/* <Noteboard /> */}
           </div>
           <div className="col-md-5">
             <Dictionary />
+            <ChatBoard />
           </div>
         </div>
       </div>

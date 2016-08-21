@@ -3,6 +3,7 @@ const PORT = process.env.PORT || 8000;
 const MONGO_URI = process.env.MONGOLAB_URI || 'mongodb://localhost/mern_notebook'
 
 //PACKAGE REQUIRES
+const http = require('http')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const express = require('express')
