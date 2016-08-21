@@ -32,7 +32,6 @@ export default class ChatBoard extends Component {
     e.preventDefault();
     this.setState({username: this.state.user_name})
   }
-
   render(){
     let username
     if(this.state.username){

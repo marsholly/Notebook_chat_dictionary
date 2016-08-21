@@ -17,10 +17,10 @@ class ChatStore extends EventEmitter{
     //       break;
     //   }
     // });
-    socket.on('message', message =>{
-      _messages = [message, ..._messages]
+    socket.on('new message', message =>{
+       _messages.push(message)
+       this.emit('CHANGE');
     })
-    this.emit('CHANGE');
   }
 
   startListening(cb){
