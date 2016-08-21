@@ -11,17 +11,17 @@ export default class Chat extends Component {
 
     if(user_name === this.props.user){
       return(
-        <div className="chatDiv">
-        <span className = "bd leftcolor">
-          {time} @{user_name}: {message}
+        <div className="leftcolor form-control">
+        <span className="left">
+          @{user_name} ({time}): {message}
         </span>
         </div>
       )
     }else{
       return(
-        <div className="chatDiv">
-        <span className = "bd rightcolor">
-          {time} @{user_name}: {message}
+        <div className="rightcolor form-control">
+        <span className="right">
+          {message} @{user_name} ({time})
         </span>
         </div>
       )

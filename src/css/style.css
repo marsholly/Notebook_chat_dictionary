@@ -34,16 +34,17 @@ table{
 
 .leftcolor{
   background-color: #cce2ee;
-  float: left;
 }
 .rightcolor{
   background-color: #f8f3ea;
+}
+.left{
+  float: left;
+}
+.right{
   float: right;
 }
 .chatDiv{
   width: 100%;
   background-color: purple;
-}
-.bd{
-  border: 1px solid black;
 }

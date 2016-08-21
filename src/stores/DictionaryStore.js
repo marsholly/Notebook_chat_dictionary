@@ -14,10 +14,6 @@ class DictionaryStore extends EventEmitter{
           _def = action.wordArr;
           this.emit('CHANGE');
           break;
-        // case Constant.CREATE_NOTE:
-        //   _notes.push(action.note);
-        //   this.emit('CHANGE');
-        //   break;
       }
     });
   }

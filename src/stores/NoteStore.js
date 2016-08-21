@@ -14,10 +14,6 @@ class NoteStore extends EventEmitter{
           _notes = action.notes;
           this.emit('CHANGE');
           break;
-        // case Constant.CREATE_NOTE:
-        //   _notes.push(action.note);
-        //   this.emit('CHANGE');
-        //   break;
       }
     });
   }

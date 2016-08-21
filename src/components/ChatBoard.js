@@ -57,7 +57,7 @@ export default class ChatBoard extends Component {
       <div>
         <h1>Chat</h1>
         {username}
-          <div className="bd">
+          <div>
             {messages}
           </div>
       </div>
