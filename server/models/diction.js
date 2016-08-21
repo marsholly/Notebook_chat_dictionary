@@ -1,6 +1,5 @@
 const request = require('request')
 
-
 const getWord = function(word, cb){
   request(`https://owlbot.info/api/v1/dictionary/${word}`, function (error, response, body) {
     if (error) cb(error)
