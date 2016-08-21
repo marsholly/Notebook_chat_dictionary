@@ -28,7 +28,6 @@ export default class NoteBoard extends Component {
     })
     return(
       <div>
-        <NoteAdd />
         <div className = "tableScroll">
           <table className="table">
             <tbody>
