@@ -29,9 +29,6 @@ li {
 table{
   margin-top: 10px;
   border-radius: 10px !important;
-  /*overflow:hidden;*/
-  height: 10px;
-  overflow: auto;
 }
 
 .leftcolor{
