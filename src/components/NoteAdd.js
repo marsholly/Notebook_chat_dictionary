@@ -31,7 +31,7 @@ export default class NoteAdd extends Component {
   render(){
     return (
       <div>
-        <h1>NoteAdd || Chat</h1>
+        <h1>NoteAdd</h1>
         <form onSubmit={this.submitMessage}>
           <div className="input-group form-inline">
             <input type="text" className="form-control" placeholder="Enter Username" value={this.state.user_name} onChange={this.changeUsername}/>
