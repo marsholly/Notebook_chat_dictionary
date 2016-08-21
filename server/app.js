@@ -41,6 +41,7 @@ app.use(cookieParser());
 io.on('connection', socket => {
   console.log('user connected')
   socket.on('message', message => {
+    socket.broadcast.emit('new message', message)
     socket.emit('new message', message)
   })
 

@@ -9,14 +9,7 @@ let socket = io()
 class ChatStore extends EventEmitter{
   constructor(){
     super();
-    // AppDispatcher.register(action =>{
-    //   switch(action.type){
-    //     case Constant.RECIEVE_NOTES:
-    //       _notes = action.notes;
-    //       this.emit('CHANGE');
-    //       break;
-    //   }
-    // });
+
     socket.on('new message', message =>{
        _messages.push(message)
        this.emit('CHANGE');

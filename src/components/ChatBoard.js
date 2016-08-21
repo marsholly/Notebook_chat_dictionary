@@ -48,19 +48,18 @@ export default class ChatBoard extends Component {
         </div>
       )
     }
-    let messages = this.state.messages.map((message, index) =>{
-      return <Chat key={index} message={message}/>
+
+    let messages = this.state.messages.map((chat, index) =>{
+      return <Chat key={index} user={this.state.username} chat={chat}/>
     })
+
     return(
       <div>
         <h1>Chat</h1>
         {username}
-
-        <table className="table">
-          <tbody>
+          <div className="bd">
             {messages}
-          </tbody>
-        </table>
+          </div>
       </div>
     )
   }

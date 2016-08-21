@@ -23,9 +23,27 @@ tr div{
   padding: 10px;
   font-size: 18px;
 }
-
+li {
+  list-style:none;
+}
 table{
   margin-top: 10px;
   border-radius: 10px !important;
   overflow:hidden;
+}
+
+.leftcolor{
+  background-color: #cce2ee;
+  float: left;
+}
+.rightcolor{
+  background-color: #f8f3ea;
+  float: right;
+}
+.chatDiv{
+  width: 100%;
+  background-color: purple;
+}
+.bd{
+  border: 1px solid black;
 }

@@ -6,8 +6,6 @@ export default class NoteAdd extends Component {
   constructor(){
     super();
     this.state = {
-      user_name: '',
-      username: '',
       message: ''
     }
     this.changeMessage = this.changeMessage.bind(this)
